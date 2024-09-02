@@ -27,6 +27,17 @@ const CategorySearch = ({ category }) => {
     fetchNews();
   }, [category]);
 
+  const noticias = news.map((article, index) => (
+    <li key={index}>
+      <div className="card">
+        <div className="card-body">
+          <h5 className="card-title">{article.title}</h5>
+        </div>
+      </div>
+      <h3>{article.author}</h3>
+    </li>
+  ));
+
   return (
     <div>
       <h2>{category} news</h2>
@@ -34,16 +45,7 @@ const CategorySearch = ({ category }) => {
         <p>{error}</p>
       ) : (
         <ul>
-          {news.map((article) => (
-            <li key={article.url}> 
-              <div className="card">
-                <div className="card-body">
-                  <h5 className="card-title">{article.title}</h5>
-                </div>
-              </div>
-              <h3>{article.author}</h3>
-            </li>
-          ))}
+          {noticias}
         </ul>
       )}
     </div>
