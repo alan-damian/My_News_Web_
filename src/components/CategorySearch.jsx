@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import config from '../API/config.js';
 import './CategorySearch.module.css';
 
-const { apiUrl, apiKey } = config;
 
 // eslint-disable-next-line react/prop-types
 const CategorySearch = ({ category }) => {
@@ -15,7 +13,7 @@ const CategorySearch = ({ category }) => {
     const fetchNews = async () => {
       if (category !== '') {
         try {
-          const response = await axios.get(`${apiUrl}/top-headlines?category=${category}&language=${language}&apiKey=${apiKey}`);
+          const response = await axios.get(`https://newsapi.org/v2/top-headlines?category=${category}&language=${language}&apiKey=5ae5b03f3b09491cb41c58b5a9bcf0ce`);
           if (response.status === 200) {
             setNews(response.data.articles);
           } else {

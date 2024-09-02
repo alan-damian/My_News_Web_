@@ -12,8 +12,8 @@ function Article(props) {
 Article.propTypes = {
   article: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    description: PropTypes.string, // Remove isRequired if description is optional
-  }).isRequired,
+    description: PropTypes.string // Remove isRequired if description is optional
+  })
 };
 
 export default Article;
