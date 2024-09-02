@@ -16,7 +16,7 @@ const Header = () => {
         <a id='logo' href='#'><img  src={logo} alt='logo'></img></a>
         <ul className="nav nav-tabs">
           <li className="nav-item dropdown mx-1">
-            <a className="nav-link" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Category</a>
+            <a className="nav-link" data-bs-toggle="dropdown" href="/" role="button" aria-expanded="false">Category</a>
             <ul className="dropdown-menu bg-info-subtle">
               <li role="button" value="business" onClick={handleCategoryChange}>business</li>
               <li role="button" value="entertainment" onClick={handleCategoryChange}>entertainment</li>
@@ -27,9 +27,7 @@ const Header = () => {
               <li role="button" value="technology" onClick={handleCategoryChange}>technology</li>
             </ul>
           </li>
-          <li className="nav-item ">
-            <a className="nav-link" href="#">Link</a>
-          </li>
+
         </ul>
       </nav>
       <CategorySearch category={category} />
