@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './CategorySearch.module.css';
 
-
 // eslint-disable-next-line react/prop-types
 const CategorySearch = ({ category }) => {
   const language = 'en';
@@ -35,8 +34,8 @@ const CategorySearch = ({ category }) => {
         <p>{error}</p>
       ) : (
         <ul>
-          {news.map((article, index) => (
-            <li key={index}>
+          {news.map((article) => (
+            <li key={article.url}> 
               <div className="card">
                 <div className="card-body">
                   <h5 className="card-title">{article.title}</h5>
