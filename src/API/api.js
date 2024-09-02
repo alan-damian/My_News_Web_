@@ -7,7 +7,8 @@ const api = axios.create({
     'Access-Control-Allow-Origin': '*',
     'User-Agent': 'My_News_Web_/1.0',
     'x-content-type-options': 'nosniff',
-    'Cache-Control': 'max-age=31536000' // added this header
+    'Cache-Control': 'max-age=31536000',
+    'Upgrade': 'h2c' // added this header to upgrade to HTTP/2
   },
 });
 
