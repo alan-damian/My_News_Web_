@@ -1,0 +1,14 @@
+ul {
+    margin-top: 5px;
+    padding: 1px;
+    list-style: none;
+}
+
+li {
+    background-color: rgb(196, 250, 232);
+    margin-top: 5px;
+    padding: 1px;
+    border-radius: 10px;
+
+}
+
